@@ -1,0 +1,507 @@
+/* ==========================================
+   Kob_asan
+   works.css
+========================================== */
+
+
+/* ==========================================
+   Works Page
+========================================== */
+
+
+.p-works{
+
+    min-height:100vh;
+
+    padding:
+        var(--space-12)
+        0;
+
+}
+
+
+
+/* ==========================================
+   Hero
+========================================== */
+
+
+.p-works__hero{
+
+    text-align:center;
+
+    margin-bottom:
+        var(--space-12);
+
+}
+
+
+
+.p-works__hero span{
+
+    display:block;
+
+    color:
+        var(--color-primary);
+
+    letter-spacing:.35em;
+
+    font-size:
+        var(--fs-sm);
+
+    margin-bottom:
+        var(--space-3);
+
+}
+
+
+
+.p-works__hero h1{
+
+    font-size:
+        clamp(
+            3rem,
+            8vw,
+            5rem
+        );
+
+    font-weight:900;
+
+    margin-bottom:
+        var(--space-4);
+
+}
+
+
+
+.p-works__hero p{
+
+    color:
+        var(--color-text-muted);
+
+    font-size:1.1rem;
+
+}
+
+
+
+/* ==========================================
+   Section
+========================================== */
+
+
+.p-works__section{
+
+    max-width:1000px;
+
+    margin:
+        0
+        auto
+        var(--space-12);
+
+    padding:
+        var(--space-8);
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .04
+        );
+
+    border:
+        1px solid
+        var(--color-border);
+
+    border-radius:
+        var(--radius-xl);
+
+    backdrop-filter:
+        blur(18px);
+
+}
+
+
+
+.p-works__section h2{
+
+    font-size:1.8rem;
+
+    margin-bottom:
+        var(--space-6);
+
+}
+
+
+
+/* ==========================================
+   Work Card
+========================================== */
+
+
+.p-works__card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+
+.p-works__card:hover{
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        var(--color-primary);
+
+    box-shadow:
+        0 15px 40px
+        rgba(
+            80,
+            220,
+            255,
+            .15
+        );
+
+}
+
+
+
+/* ==========================================
+   Badge
+========================================== */
+
+
+.p-works__badge{
+
+    display:inline-block;
+
+    padding:
+        .4rem
+        .9rem;
+
+    margin-bottom:
+        var(--space-4);
+
+    border-radius:999px;
+
+    background:
+        rgba(
+            80,
+            220,
+            255,
+            .12
+        );
+
+    border:
+        1px solid
+        rgba(
+            80,
+            220,
+            255,
+            .3
+        );
+
+    color:
+        rgb(
+            120,
+            220,
+            255
+        );
+
+    font-size:
+        var(--fs-sm);
+
+    letter-spacing:.15em;
+
+}
+
+
+
+/* ==========================================
+   Tags
+========================================== */
+
+
+.p-works__tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:.6rem;
+
+    margin:
+        var(--space-5)
+        0;
+
+}
+
+
+
+.p-works__tags span{
+
+    padding:
+        .35rem
+        .8rem;
+
+    border-radius:999px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .05
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .08
+        );
+
+    font-size:
+        .85rem;
+
+}
+
+
+
+/* ==========================================
+   Launch Button
+========================================== */
+
+
+.p-works__link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.5rem;
+
+    margin-top:
+        var(--space-4);
+
+    color:
+        var(--color-primary);
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:
+        gap .25s ease;
+
+}
+
+
+
+.p-works__link:hover{
+
+    gap:1rem;
+
+}
+
+
+
+/* ==========================================
+   Space Background
+========================================== */
+
+
+body{
+
+    background:
+
+        radial-gradient(
+            circle at top,
+            rgba(30,120,255,.15),
+            transparent 40%
+        ),
+
+        radial-gradient(
+            circle at bottom,
+            rgba(0,255,170,.12),
+            transparent 35%
+        ),
+
+        #050814;
+
+}
+
+
+
+.space-bg{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+
+
+.space-bg span{
+
+    position:absolute;
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:
+
+        rgba(
+            80,
+            220,
+            255,
+            .85
+        );
+
+    box-shadow:
+        0 0 18px
+        rgba(
+            80,
+            220,
+            255,
+            .9
+        );
+
+    animation:
+        starPulse
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+
+.space-bg span:nth-child(1){
+
+    top:15%;
+    left:18%;
+
+}
+
+.space-bg span:nth-child(2){
+
+    top:70%;
+    left:28%;
+    animation-delay:1s;
+
+}
+
+.space-bg span:nth-child(3){
+
+    top:32%;
+    left:82%;
+
+}
+
+.space-bg span:nth-child(4){
+
+    top:82%;
+    left:70%;
+    animation-delay:2s;
+
+}
+
+.space-bg span:nth-child(5){
+
+    top:18%;
+    left:62%;
+
+}
+
+.space-bg span:nth-child(6){
+
+    top:56%;
+    left:48%;
+    animation-delay:.5s;
+
+}
+
+.space-bg span:nth-child(7){
+
+    top:42%;
+    left:92%;
+    animation-delay:1.5s;
+
+}
+
+
+
+/* ==========================================
+   Animation
+========================================== */
+
+
+@keyframes starPulse{
+
+    0%,
+    100%{
+
+        opacity:.3;
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(2);
+
+    }
+
+}
+
+
+
+/* ==========================================
+   Responsive
+========================================== */
+
+
+@media(max-width:768px){
+
+    .p-works{
+
+        padding:
+            var(--space-8)
+            0;
+
+    }
+
+    .p-works__section{
+
+        padding:
+            var(--space-6);
+
+    }
+
+}
