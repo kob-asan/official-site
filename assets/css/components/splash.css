@@ -1,0 +1,429 @@
+/* ==========================================
+   Splash Screen
+========================================== */
+
+
+#splash {
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:9999;
+
+
+    background:
+
+        #030712;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    overflow:hidden;
+
+
+    animation:
+
+        splashHide
+        1s
+        2s
+        forwards;
+
+}
+
+
+
+
+.splash-system {
+
+    text-align:center;
+
+    color:white;
+
+    animation:
+
+        systemFade
+        2s
+        ease
+        forwards;
+
+
+}
+
+
+
+.splash-system h1 {
+
+    font-size:
+
+        clamp(
+            1.5rem,
+            4vw,
+            2.5rem
+        );
+
+
+    letter-spacing:
+
+        .3em;
+
+
+}
+
+
+
+.splash-loading {
+
+    margin-top:20px;
+
+    opacity:.7;
+
+}
+
+
+
+
+.splash-status {
+
+    margin-top:30px;
+
+    font-size:.85rem;
+
+    line-height:2;
+
+    color:
+
+        rgba(
+            150,
+            220,
+            255,
+            .8
+        );
+
+}
+
+
+
+
+
+.star-logo {
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+}
+
+
+
+.star-logo span {
+
+
+    position:absolute;
+
+
+    width:8px;
+
+    height:8px;
+
+
+    border-radius:50%;
+
+
+    background:
+
+        #80eaff;
+
+
+    box-shadow:
+
+        0 0 25px
+        #80eaff;
+
+
+
+}
+
+
+
+.star-logo span:nth-child(1){
+
+    transform:translate(-300px,-200px);
+
+    animation:
+        gather1
+        1s
+        ease-in-out
+        forwards;
+
+}
+
+
+.star-logo span:nth-child(2){
+
+    transform:translate(280px,-180px);
+
+    animation:
+        gather2
+        1s
+        ease-in-out
+        forwards;
+
+}
+
+
+.star-logo span:nth-child(3){
+
+    transform:translate(-250px,220px);
+
+    animation:
+        gather3
+        1s
+        ease-in-out
+        forwards;
+
+}
+
+
+.star-logo span:nth-child(4){
+
+    transform:translate(260px,230px);
+
+    animation:
+        gather4
+        1s
+        ease-in-out
+        forwards;
+
+}
+
+
+.star-logo span:nth-child(5){
+
+    transform:translate(0,-300px);
+
+    animation:
+        gather5
+        1s
+        ease-in-out
+        forwards;
+
+}
+
+
+
+
+@keyframes gather1 {
+
+    to {
+
+        transform:
+        translate(0,0);
+
+    }
+
+}
+
+
+
+@keyframes gather2 {
+
+    to {
+
+        transform:
+        translate(0,0);
+
+    }
+
+}
+
+
+
+@keyframes gather3 {
+
+    to {
+
+        transform:
+        translate(0,0);
+
+    }
+
+}
+
+
+
+@keyframes gather4 {
+
+    to {
+
+        transform:
+        translate(0,0);
+
+    }
+
+}
+
+
+
+@keyframes gather5 {
+
+    to {
+
+        transform:
+        translate(0,0);
+
+    }
+
+}
+
+
+
+
+@keyframes logoAppear {
+
+
+    from {
+
+        opacity:0;
+
+        transform:
+
+            scale(.7);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:
+
+            scale(1);
+
+    }
+
+}
+
+
+
+
+
+@keyframes splashHide {
+
+
+    to {
+
+        opacity:0;
+
+        visibility:hidden;
+
+    }
+
+}
+
+
+
+
+
+@keyframes systemFade {
+
+
+    to {
+
+        opacity:0;
+
+    }
+
+}
+
+.star-logo span:last-child {
+    box-shadow:
+        0 0 80px
+        rgba(80,220,255,.9);
+}
+
+.ripple {
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+
+    width:20px;
+    height:20px;
+
+
+    transform:
+
+        translate(-50%,-50%);
+
+
+    border-radius:50%;
+
+
+    border:
+
+        2px solid
+        rgba(
+            100,
+            230,
+            255,
+            .8
+        );
+
+
+    opacity:0;
+
+
+    animation:
+
+        rippleEffect
+        1.2s
+        1s
+        ease-out
+        forwards;
+
+}
+
+
+
+@keyframes rippleEffect {
+
+
+    0% {
+
+        width:20px;
+
+        height:20px;
+
+        opacity:1;
+
+    }
+
+
+
+    100% {
+
+        width:500px;
+
+        height:500px;
+
+        opacity:0;
+
+    }
+
+}

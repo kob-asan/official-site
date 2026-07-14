@@ -1,0 +1,687 @@
+/* ==========================================
+   Kob_asan
+   search.css
+========================================== */
+
+
+/* ==========================================
+   Search Page
+========================================== */
+
+
+.p-search {
+
+    min-height:100vh;
+
+    padding:
+
+        var(--space-12)
+        0;
+
+
+}
+
+
+
+/* Header */
+
+
+.p-search__header {
+
+    text-align:center;
+
+    margin-bottom:
+
+        var(--space-8);
+
+}
+
+
+
+.p-search__eyebrow {
+
+
+    display:block;
+
+
+    color:
+
+        var(--color-primary);
+
+
+    font-size:
+
+        var(--fs-sm);
+
+
+    letter-spacing:
+
+        .3em;
+
+
+    margin-bottom:
+
+        var(--space-3);
+
+
+}
+
+
+
+.p-search__header h1 {
+
+
+    font-size:
+
+        clamp(
+            2rem,
+            5vw,
+            3rem
+        );
+
+
+    margin-bottom:
+
+        var(--space-3);
+
+
+}
+
+
+
+.p-search__header p {
+
+
+    color:
+
+        var(--color-text-muted);
+
+
+}
+
+
+
+/* Search Form */
+
+
+.p-search-form {
+
+
+    display:flex;
+
+
+    gap:
+
+        var(--space-3);
+
+
+
+    max-width:
+
+        700px;
+
+
+
+    margin:
+
+        0 auto;
+
+
+
+    padding:
+
+        var(--space-3);
+
+
+
+    background:
+
+        rgba(
+            255,
+            255,
+            255,
+            .04
+        );
+
+
+
+    border:
+
+        1px solid
+        var(--color-border);
+
+
+
+    border-radius:
+
+        var(--radius-xl);
+
+
+
+    backdrop-filter:
+
+        blur(15px);
+
+
+}
+
+
+
+.p-search-form__input {
+
+
+    flex:1;
+
+
+    padding:
+
+        0
+        var(--space-5);
+
+
+
+    border:none;
+
+
+    outline:none;
+
+
+    background:
+
+        transparent;
+
+
+
+    color:
+
+        var(--color-text);
+
+
+
+    font-size:
+
+        1rem;
+
+
+}
+
+
+
+.p-search-form__input::placeholder {
+
+
+    color:
+
+        var(--color-text-muted);
+
+
+}
+
+
+
+/* Result Area */
+
+
+.p-search-results {
+
+
+    margin-top:
+
+        var(--space-12);
+
+
+}
+
+
+
+.p-search-results h2 {
+
+
+    margin-bottom:
+
+        var(--space-5);
+
+
+}
+
+
+
+
+
+
+/* Result Cards */
+
+
+.p-search-result {
+
+
+    display:grid;
+
+
+    gap:
+
+        var(--space-5);
+
+
+}
+
+
+
+
+.p-search-result .c-card {
+
+
+    padding:
+
+        var(--space-6);
+
+
+
+    background:
+
+        rgba(
+            255,
+            255,
+            255,
+            .04
+        );
+
+
+    border:
+
+        1px solid
+        var(--color-border);
+
+
+
+    border-radius:
+
+        var(--radius-lg);
+
+
+
+    transition:
+
+        transform .25s ease,
+        border-color .25s ease;
+
+
+}
+
+
+
+.p-search-result .c-card:hover {
+
+
+    transform:
+
+        translateY(-5px);
+
+
+    border-color:
+
+        var(--color-primary);
+
+
+}
+
+
+
+.p-search-result h3 {
+
+
+    margin-bottom:
+
+        var(--space-3);
+
+
+}
+
+
+
+.p-search-result p {
+
+
+    color:
+
+        var(--color-text-muted);
+
+
+
+    margin-bottom:
+
+        var(--space-4);
+
+
+}
+
+
+
+.p-search-result a {
+
+
+    display:inline-flex;
+
+
+    width:
+
+        fit-content;
+
+
+    padding:
+
+        .6rem 1.2rem;
+
+
+    border-radius:
+
+        var(--radius-md);
+
+
+
+    background:
+
+        var(--color-primary);
+
+
+
+    color:
+
+        #fff;
+
+
+
+    text-decoration:none;
+
+
+}
+
+
+
+
+
+/* Empty */
+
+
+.p-search-result > p {
+
+
+    text-align:center;
+
+
+    padding:
+
+        var(--space-8);
+
+
+
+    color:
+
+        var(--color-text-muted);
+
+
+
+    border:
+
+        1px dashed
+        var(--color-border);
+
+
+
+    border-radius:
+
+        var(--radius-lg);
+
+
+}
+
+
+
+
+
+
+/* Responsive */
+
+
+@media(max-width:768px){
+
+
+    .p-search {
+
+        padding:
+
+            var(--space-8)
+            0;
+
+    }
+
+
+
+    .p-search-form {
+
+
+        flex-direction:column;
+
+
+    }
+
+
+
+    .p-search-form__input {
+
+
+        min-height:
+
+            50px;
+
+
+    }
+
+
+}
+
+/* ==========================================
+   Space Background
+========================================== */
+
+
+body {
+
+    background:
+
+        radial-gradient(
+            circle at top,
+            rgba(30,120,255,.15),
+            transparent 40%
+        ),
+
+        radial-gradient(
+            circle at bottom,
+            rgba(0,255,170,.12),
+            transparent 35%
+        ),
+
+        #050814;
+
+}
+
+
+
+.space-bg {
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+
+
+.space-bg span {
+
+
+    position:absolute;
+
+
+    width:6px;
+
+    height:6px;
+
+
+    border-radius:50%;
+
+
+    background:
+
+        rgba(
+            80,
+            220,
+            255,
+            .8
+        );
+
+
+    box-shadow:
+
+        0 0 20px
+        rgba(
+            80,
+            220,
+            255,
+            .9
+        );
+
+
+    animation:
+
+        starPulse
+        4s
+        ease-in-out
+        infinite;
+
+
+}
+
+
+
+
+
+.space-bg span:nth-child(1){
+
+    top:20%;
+
+    left:15%;
+
+}
+
+
+
+.space-bg span:nth-child(2){
+
+    top:70%;
+
+    left:25%;
+
+    animation-delay:1s;
+
+}
+
+
+
+.space-bg span:nth-child(3){
+
+    top:35%;
+
+    left:80%;
+
+    background:
+
+        rgba(80,255,160,.8);
+
+}
+
+
+
+.space-bg span:nth-child(4){
+
+    top:80%;
+
+    left:70%;
+
+    animation-delay:2s;
+
+}
+
+
+
+.space-bg span:nth-child(5){
+
+    top:15%;
+
+    left:60%;
+
+    background:
+
+        rgba(80,255,160,.8);
+
+}
+
+
+
+.space-bg span:nth-child(6){
+
+    top:55%;
+
+    left:45%;
+
+    animation-delay:.5s;
+
+}
+
+
+
+.space-bg span:nth-child(7){
+
+    top:40%;
+
+    left:90%;
+
+    animation-delay:1.5s;
+
+}
+
+
+
+@keyframes starPulse {
+
+
+    0%,
+    100% {
+
+        opacity:.25;
+
+        transform:
+
+            scale(1);
+
+    }
+
+
+
+    50% {
+
+        opacity:1;
+
+        transform:
+
+            scale(2);
+
+    }
+
+}

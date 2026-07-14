@@ -1,0 +1,502 @@
+/* ==========================================
+   Kob_asan
+   home.css
+========================================== */
+
+
+/* ==========================================
+   Hero
+========================================== */
+
+.p-home-hero {
+
+    min-height: calc(100vh - var(--header-height));
+
+    display: flex;
+
+    align-items: center;
+
+    padding-block: var(--space-12);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* 背景の光 */
+
+.p-home-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    top: -200px;
+    right: -150px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(46,204,113,.18),
+            transparent 70%
+        );
+
+    filter: blur(30px);
+
+    pointer-events: none;
+
+}
+
+
+.p-home-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    bottom: -200px;
+    left: -150px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(52,152,219,.18),
+            transparent 70%
+        );
+
+    filter: blur(40px);
+
+    pointer-events: none;
+
+}
+
+
+/* Hero content */
+
+.p-home-hero__content {
+
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 800px;
+
+}
+
+
+/* Eyebrow */
+
+.p-home-hero__eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: var(--space-4);
+
+    color: var(--color-primary);
+
+    font-size: var(--fs-sm);
+
+    font-weight: var(--fw-medium);
+
+    letter-spacing: .15em;
+
+    text-transform: uppercase;
+
+}
+
+
+/* Title */
+
+.p-home-hero__title {
+
+    font-size: clamp(
+        3rem,
+        8vw,
+        6rem
+    );
+
+    font-weight: var(--fw-bold);
+
+    letter-spacing: -.04em;
+
+    color: var(--color-text);
+
+}
+
+
+/* Subtitle */
+
+.p-home-hero__subtitle {
+
+    margin-top: var(--space-4);
+
+    font-size: var(--fs-xl);
+
+    color: var(--color-text-secondary);
+
+}
+
+
+/* ==========================================
+   Search
+========================================== */
+
+.p-home-search {
+
+    display: flex;
+
+    gap: var(--space-3);
+
+    margin-top: var(--space-8);
+
+    max-width: 600px;
+
+}
+
+
+.p-home-search__input {
+
+    flex: 1;
+
+    min-height: 48px;
+
+    padding-inline: var(--space-4);
+
+    background: var(--color-card);
+
+    color: var(--color-text);
+
+    border:
+
+        1px solid
+
+        var(--color-border);
+
+    border-radius: var(--radius-md);
+
+}
+
+
+.p-home-search__input::placeholder {
+
+    color: var(--color-text-muted);
+
+}
+
+
+.p-home-search__input:focus {
+
+    outline: none;
+
+    border-color: var(--color-primary);
+
+}
+
+
+/* ==========================================
+   Quick Links
+========================================== */
+
+.p-home-links {
+
+    padding-block: var(--space-8);
+
+}
+
+
+/* ==========================================
+   Section Header
+========================================== */
+
+.p-home-section-header {
+
+    margin-bottom: var(--space-6);
+
+}
+
+
+.p-home-section-header h2 {
+
+    color: var(--color-text);
+
+}
+
+
+.p-home-section-header p {
+
+    margin-top: var(--space-2);
+
+}
+
+
+/* ==========================================
+   Subjects
+========================================== */
+
+.p-home-subjects {
+
+    padding-block: var(--space-12);
+
+}
+
+
+.c-card--subject {
+
+    min-height: 260px;
+
+}
+
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width:768px) {
+
+
+    .p-home-hero {
+
+        min-height: auto;
+
+        padding-top:
+
+            calc(
+                var(--header-height)
+                +
+                var(--space-12)
+            );
+
+        padding-bottom: var(--space-12);
+
+    }
+
+
+    .p-home-search {
+
+        flex-direction: column;
+
+    }
+
+
+    .p-home-hero__subtitle {
+
+        font-size: var(--fs-lg);
+
+    }
+
+
+}
+
+/* ==========================================
+   Space Background
+========================================== */
+
+
+body {
+
+    background:
+
+        radial-gradient(
+            circle at top,
+            rgba(30,120,255,.15),
+            transparent 40%
+        ),
+
+        radial-gradient(
+            circle at bottom,
+            rgba(0,255,170,.12),
+            transparent 35%
+        ),
+
+        #050814;
+
+}
+
+
+
+.space-bg {
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+
+
+.space-bg span {
+
+
+    position:absolute;
+
+
+    width:6px;
+
+    height:6px;
+
+
+    border-radius:50%;
+
+
+    background:
+
+        rgba(
+            80,
+            220,
+            255,
+            .8
+        );
+
+
+    box-shadow:
+
+        0 0 20px
+        rgba(
+            80,
+            220,
+            255,
+            .9
+        );
+
+
+    animation:
+
+        starPulse
+        4s
+        ease-in-out
+        infinite;
+
+
+}
+
+
+
+
+
+.space-bg span:nth-child(1){
+
+    top:20%;
+
+    left:15%;
+
+}
+
+
+
+.space-bg span:nth-child(2){
+
+    top:70%;
+
+    left:25%;
+
+    animation-delay:1s;
+
+}
+
+
+
+.space-bg span:nth-child(3){
+
+    top:35%;
+
+    left:80%;
+
+    background:
+
+        rgba(80,255,160,.8);
+
+}
+
+
+
+.space-bg span:nth-child(4){
+
+    top:80%;
+
+    left:70%;
+
+    animation-delay:2s;
+
+}
+
+
+
+.space-bg span:nth-child(5){
+
+    top:15%;
+
+    left:60%;
+
+    background:
+
+        rgba(80,255,160,.8);
+
+}
+
+
+
+.space-bg span:nth-child(6){
+
+    top:55%;
+
+    left:45%;
+
+    animation-delay:.5s;
+
+}
+
+
+
+.space-bg span:nth-child(7){
+
+    top:40%;
+
+    left:90%;
+
+    animation-delay:1.5s;
+
+}
+
+
+
+@keyframes starPulse {
+
+
+    0%,
+    100% {
+
+        opacity:.25;
+
+        transform:
+
+            scale(1);
+
+    }
+
+
+
+    50% {
+
+        opacity:1;
+
+        transform:
+
+            scale(2);
+
+    }
+
+}

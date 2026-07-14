@@ -1,0 +1,470 @@
+/* ==========================================
+   Kob_asan
+   429.css
+========================================== */
+
+
+/* ==========================================
+   Rate Limit Page
+========================================== */
+
+
+.p-rate-limit {
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:var(--space-8);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+/* Background */
+
+
+.p-rate-limit::before {
+
+    content:"";
+
+    position:absolute;
+
+    width:550px;
+
+    height:550px;
+
+    border-radius:50%;
+
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(241,196,15,.18),
+            transparent 70%
+        );
+
+
+    top:-180px;
+
+    right:-150px;
+
+}
+
+
+
+.p-rate-limit::after {
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    border-radius:50%;
+
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(52,152,219,.15),
+            transparent 70%
+        );
+
+
+    bottom:-150px;
+
+    left:-120px;
+
+}
+
+
+
+/* Container */
+
+
+.p-rate-limit__container {
+
+
+    width:min(
+        750px,
+        100%
+    );
+
+
+    text-align:center;
+
+
+    padding:
+
+        var(--space-8);
+
+
+
+    background:
+
+        rgba(
+            255,
+            255,
+            255,
+            .04
+        );
+
+
+    border:
+
+        1px solid
+        var(--color-border);
+
+
+    border-radius:
+
+        var(--radius-xl);
+
+
+
+    backdrop-filter:
+
+        blur(20px);
+
+
+
+    animation:
+
+        rateLimitEnter
+        .8s
+        ease
+        forwards;
+
+
+}
+
+
+
+/* Icon */
+
+
+.p-rate-limit__icon {
+
+
+    font-size:
+
+        3.5rem;
+
+
+    margin-bottom:
+
+        var(--space-4);
+
+
+    animation:
+
+        waiting
+        2s
+        ease-in-out
+        infinite;
+
+
+}
+
+
+
+/* Code */
+
+
+.p-rate-limit__code {
+
+
+    font-size:
+
+        clamp(
+            6rem,
+            14vw,
+            10rem
+        );
+
+
+    font-weight:
+
+        900;
+
+
+    line-height:
+
+        1;
+
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #f1c40f,
+            #3498db
+        );
+
+
+    -webkit-background-clip:
+
+        text;
+
+
+    color:
+
+        transparent;
+
+
+}
+
+
+
+/* Label */
+
+
+.p-rate-limit__label {
+
+
+    display:block;
+
+
+    margin-top:
+
+        var(--space-3);
+
+
+
+    letter-spacing:
+
+        .25em;
+
+
+    font-size:
+
+        var(--fs-sm);
+
+
+
+    color:
+
+        #f1c40f;
+
+
+}
+
+
+
+/* Heading */
+
+
+.p-rate-limit h1 {
+
+
+    margin:
+
+        var(--space-5)
+        0
+        var(--space-3);
+
+
+}
+
+
+
+/* Status */
+
+
+.p-rate-limit__status {
+
+
+    display:inline-block;
+
+
+    margin-top:
+
+        var(--space-5);
+
+
+    padding:
+
+        var(--space-3)
+        var(--space-6);
+
+
+    border-radius:
+
+        var(--radius-md);
+
+
+
+    background:
+
+        rgba(
+            241,
+            196,
+            15,
+            .12
+        );
+
+
+
+    border:
+
+        1px solid
+        rgba(
+            241,
+            196,
+            15,
+            .35
+        );
+
+
+
+    font-family:
+
+        monospace;
+
+
+}
+
+
+
+.p-rate-limit__status span {
+
+
+    color:
+
+        #f1c40f;
+
+
+}
+
+
+
+/* Actions */
+
+
+.p-rate-limit__actions {
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:
+
+        var(--space-4);
+
+
+
+    margin-top:
+
+        var(--space-6);
+
+
+
+    flex-wrap:
+
+        wrap;
+
+
+}
+
+
+
+/* Animation */
+
+
+@keyframes rateLimitEnter {
+
+
+    from {
+
+        opacity:0;
+
+        transform:
+
+            translateY(25px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:
+
+            translateY(0);
+
+    }
+
+
+}
+
+
+
+@keyframes waiting {
+
+
+    0%,
+    100% {
+
+        transform:
+
+            translateY(0);
+
+    }
+
+
+    50% {
+
+        transform:
+
+            translateY(-8px);
+
+    }
+
+
+}
+
+
+
+/* Responsive */
+
+
+@media(max-width:768px){
+
+
+    .p-rate-limit {
+
+        padding:
+
+            var(--space-4);
+
+    }
+
+
+
+    .p-rate-limit__container {
+
+        padding:
+
+            var(--space-6);
+
+    }
+
+
+}

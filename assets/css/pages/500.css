@@ -1,0 +1,414 @@
+/* ==========================================
+   Kob_asan
+   500.css
+========================================== */
+
+
+/* ==========================================
+   System Error Page
+========================================== */
+
+
+.p-system-error {
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:var(--space-8);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+/* Background */
+
+.p-system-error::before {
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    border-radius:50%;
+
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(230,126,34,.18),
+            transparent 70%
+        );
+
+
+    top:-200px;
+
+    left:-150px;
+
+}
+
+
+
+.p-system-error::after {
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(231,76,60,.15),
+            transparent 70%
+        );
+
+
+    bottom:-150px;
+
+    right:-150px;
+
+}
+
+
+
+/* Container */
+
+
+.p-system-error__container {
+
+
+    width:min(
+        750px,
+        100%
+    );
+
+
+    text-align:center;
+
+
+    padding:
+
+        var(--space-8);
+
+
+    background:
+
+        rgba(
+            255,
+            255,
+            255,
+            .04
+        );
+
+
+    border:
+
+        1px solid
+        var(--color-border);
+
+
+    border-radius:
+
+        var(--radius-xl);
+
+
+    backdrop-filter:
+
+        blur(20px);
+
+
+    animation:
+
+        systemErrorEnter
+        .8s
+        ease
+        forwards;
+
+
+}
+
+
+
+/* Icon */
+
+
+.p-system-error__icon {
+
+
+    font-size:
+
+        3.5rem;
+
+
+    margin-bottom:
+
+        var(--space-4);
+
+
+}
+
+
+
+/* Code */
+
+
+.p-system-error__code {
+
+
+    font-size:
+
+        clamp(
+            6rem,
+            14vw,
+            10rem
+        );
+
+
+    font-weight:
+
+        900;
+
+
+    line-height:
+
+        1;
+
+
+    color:
+
+        #e67e22;
+
+
+}
+
+
+
+/* Label */
+
+
+.p-system-error__label {
+
+
+    display:block;
+
+
+    margin-top:
+
+        var(--space-3);
+
+
+    letter-spacing:
+
+        .3em;
+
+
+    font-size:
+
+        var(--fs-sm);
+
+
+    color:
+
+        #e67e22;
+
+
+}
+
+
+
+/* Heading */
+
+
+.p-system-error h1 {
+
+
+    margin:
+
+        var(--space-5)
+        0
+        var(--space-3);
+
+
+}
+
+
+
+/* Status */
+
+
+.p-system-error__status {
+
+
+    display:
+
+        inline-block;
+
+
+    margin-top:
+
+        var(--space-5);
+
+
+    padding:
+
+        var(--space-3)
+        var(--space-6);
+
+
+    border-radius:
+
+        var(--radius-md);
+
+
+
+    background:
+
+        rgba(
+            230,
+            126,
+            34,
+            .12
+        );
+
+
+    border:
+
+        1px solid
+        rgba(
+            230,
+            126,
+            34,
+            .35
+        );
+
+
+    font-family:
+
+        monospace;
+
+
+}
+
+
+
+.p-system-error__status span {
+
+
+    color:
+
+        #e67e22;
+
+
+}
+
+
+
+/* Actions */
+
+
+.p-system-error__actions {
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:
+
+        var(--space-4);
+
+
+    margin-top:
+
+        var(--space-6);
+
+
+    flex-wrap:
+
+        wrap;
+
+
+}
+
+
+
+/* Animation */
+
+
+@keyframes systemErrorEnter {
+
+
+    from {
+
+        opacity:0;
+
+        transform:
+
+            translateY(25px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:
+
+            translateY(0);
+
+    }
+
+
+}
+
+
+
+/* Responsive */
+
+
+@media(max-width:768px){
+
+
+    .p-system-error {
+
+        padding:
+
+            var(--space-4);
+
+    }
+
+
+
+    .p-system-error__container {
+
+        padding:
+
+            var(--space-6);
+
+    }
+
+
+}

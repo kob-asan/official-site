@@ -1,0 +1,155 @@
+/* ==========================================
+   Kob_asan
+   layout.css
+========================================== */
+
+
+/* ==========================================
+   Container
+========================================== */
+
+.l-container {
+
+    width: 100%;
+
+    max-width: var(--container-width);
+
+    margin-inline: auto;
+
+    padding-inline: var(--space-6);
+
+}
+
+
+
+/* ==========================================
+   Main
+========================================== */
+
+.l-main {
+
+    min-height: 100vh;
+
+}
+
+
+
+/* ==========================================
+   Section
+========================================== */
+
+.l-section {
+
+    padding-block: var(--space-16);
+
+}
+
+
+
+/* ==========================================
+   Header Inner
+========================================== */
+
+.l-header__inner {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    height: var(--header-height);
+
+}
+
+
+
+/* ==========================================
+   Flex Utilities
+========================================== */
+
+.l-flex {
+
+    display: flex;
+
+}
+
+
+
+.l-flex-center {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+
+.l-flex-between {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+
+/* ==========================================
+   Cluster
+   横並び + 自動折返し
+========================================== */
+
+.l-cluster {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: var(--space-3);
+
+}
+
+
+
+/* ==========================================
+   Stack
+   縦方向レイアウト
+========================================== */
+
+.l-stack {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-6);
+
+}
+
+
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:768px){
+
+
+    .l-container {
+
+        padding-inline:
+
+            var(--space-4);
+
+    }
+
+
+}

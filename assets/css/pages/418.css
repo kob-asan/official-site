@@ -1,0 +1,411 @@
+/* ==========================================
+   Kob_asan
+   418.css
+========================================== */
+
+
+/* ==========================================
+   Teapot Page
+========================================== */
+
+
+.p-teapot {
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:var(--space-8);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+/* Background */
+
+.p-teapot::before {
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(46,204,113,.15),
+            transparent 70%
+        );
+
+    top:-200px;
+
+    left:-150px;
+
+}
+
+
+
+.p-teapot::after {
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(210,160,90,.18),
+            transparent 70%
+        );
+
+    bottom:-150px;
+
+    right:-150px;
+
+}
+
+
+
+/* Container */
+
+.p-teapot__container {
+
+    width:min(
+        700px,
+        100%
+    );
+
+    text-align:center;
+
+    padding:var(--space-8);
+
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .05
+        );
+
+
+    border:
+
+        1px solid
+        var(--color-border);
+
+
+    border-radius:
+
+        var(--radius-xl);
+
+
+    backdrop-filter:
+
+        blur(18px);
+
+
+    animation:
+
+        teapotEnter
+        .8s
+        ease
+        forwards;
+
+}
+
+
+
+/* Icon */
+
+.p-teapot__icon {
+
+
+    font-size:4rem;
+
+
+    margin-bottom:
+
+        var(--space-4);
+
+
+    animation:
+
+        cupFloat
+        3s
+        ease-in-out
+        infinite;
+
+
+}
+
+
+
+/* Code */
+
+.p-teapot__code {
+
+
+    font-size:
+
+        clamp(
+            5rem,
+            12vw,
+            9rem
+        );
+
+
+    font-weight:
+
+        800;
+
+
+    line-height:1;
+
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #2ecc71,
+            #d2a05a
+        );
+
+
+    -webkit-background-clip:
+
+        text;
+
+
+    color:
+
+        transparent;
+
+
+}
+
+
+
+/* Label */
+
+.p-teapot__label {
+
+
+    display:block;
+
+
+    margin-top:
+
+        var(--space-3);
+
+
+    color:
+
+        var(--color-primary);
+
+
+    letter-spacing:
+
+        .25em;
+
+
+    font-size:
+
+        var(--fs-sm);
+
+
+}
+
+
+
+/* Text */
+
+.p-teapot h1 {
+
+
+    margin:
+
+        var(--space-5)
+        0
+        var(--space-3);
+
+
+}
+
+
+
+.p-teapot__status {
+
+
+    margin-top:
+
+        var(--space-5);
+
+
+    padding:
+
+        var(--space-3);
+
+
+    border-radius:
+
+        var(--radius-md);
+
+
+    background:
+
+        rgba(
+            255,
+            255,
+            255,
+            .05
+        );
+
+
+    font-family:
+
+        monospace;
+
+
+    color:
+
+        var(--color-text-muted);
+
+
+}
+
+
+
+/* Actions */
+
+.p-teapot__actions {
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:
+
+        var(--space-4);
+
+
+    margin-top:
+
+        var(--space-6);
+
+
+    flex-wrap:
+
+        wrap;
+
+
+}
+
+
+
+/* Animation */
+
+
+@keyframes teapotEnter {
+
+
+    from {
+
+        opacity:0;
+
+        transform:
+
+            translateY(25px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:
+
+            translateY(0);
+
+    }
+
+
+}
+
+
+
+@keyframes cupFloat {
+
+
+    0%,
+    100% {
+
+        transform:
+
+            translateY(0);
+
+    }
+
+
+    50% {
+
+        transform:
+
+            translateY(-12px);
+
+    }
+
+
+}
+
+
+
+/* Responsive */
+
+
+@media(max-width:768px){
+
+
+    .p-teapot {
+
+        padding:
+
+            var(--space-4);
+
+    }
+
+
+
+    .p-teapot__container {
+
+        padding:
+
+            var(--space-6);
+
+    }
+
+
+}

@@ -1,0 +1,628 @@
+/* ==========================================
+   Kob_asan
+   721.css
+========================================== */
+
+
+/* ==========================================
+   Knowledge Shift Page
+========================================== */
+
+
+.p-knowledge {
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:var(--space-8);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+/* Background */
+
+.p-knowledge::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:650px;
+
+
+    height:650px;
+
+
+    border-radius:50%;
+
+
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(52,152,219,.2),
+            transparent 70%
+        );
+
+
+
+    top:-200px;
+
+
+    left:-200px;
+
+
+}
+
+
+
+.p-knowledge::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:500px;
+
+
+    height:500px;
+
+
+    border-radius:50%;
+
+
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(46,204,113,.18),
+            transparent 70%
+        );
+
+
+
+    bottom:-150px;
+
+
+    right:-150px;
+
+
+}
+
+
+
+/* Container */
+
+
+.p-knowledge__container {
+
+
+    width:min(
+        800px,
+        100%
+    );
+
+
+
+    text-align:center;
+
+
+
+    padding:
+
+        var(--space-8);
+
+
+
+    background:
+
+        rgba(
+            255,
+            255,
+            255,
+            .05
+        );
+
+
+
+    border:
+
+        1px solid
+        var(--color-border);
+
+
+
+    border-radius:
+
+        var(--radius-xl);
+
+
+
+    backdrop-filter:
+
+        blur(20px);
+
+
+
+    animation:
+
+        knowledgeEnter
+        .8s
+        ease
+        forwards;
+
+
+}
+
+
+
+/* Icon */
+
+
+.p-knowledge__icon {
+
+
+    font-size:
+
+        4rem;
+
+
+
+    margin-bottom:
+
+        var(--space-4);
+
+
+
+    animation:
+
+        brainPulse
+        2.5s
+        ease-in-out
+        infinite;
+
+
+}
+
+
+
+/* Code */
+
+
+.p-knowledge__code {
+
+
+    font-size:
+
+        clamp(
+            6rem,
+            15vw,
+            11rem
+        );
+
+
+
+    font-weight:
+
+        900;
+
+
+
+    line-height:
+
+        1;
+
+
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #3498db,
+            #2ecc71
+        );
+
+
+
+    -webkit-background-clip:
+
+        text;
+
+
+
+    color:
+
+        transparent;
+
+
+}
+
+
+
+/* Label */
+
+
+.p-knowledge__label {
+
+
+    display:block;
+
+
+
+    margin-top:
+
+        var(--space-3);
+
+
+
+    letter-spacing:
+
+        .3em;
+
+
+
+    font-size:
+
+        var(--fs-sm);
+
+
+
+    color:
+
+        #3498db;
+
+
+}
+
+
+
+/* Heading */
+
+
+.p-knowledge h1 {
+
+
+    margin:
+
+        var(--space-5)
+        0
+        var(--space-3);
+
+
+}
+
+
+
+/* Progress */
+
+
+.p-knowledge__progress {
+
+
+    width:
+
+        min(
+            400px,
+            100%
+        );
+
+
+
+    height:
+
+        10px;
+
+
+
+    margin:
+
+        var(--space-6)
+        auto;
+
+
+
+    overflow:hidden;
+
+
+
+    border-radius:
+
+        999px;
+
+
+
+    background:
+
+        rgba(
+            255,
+            255,
+            255,
+            .1
+        );
+
+
+}
+
+
+
+.p-knowledge__progress-bar {
+
+
+    height:100%;
+
+
+
+    width:65%;
+
+
+
+    border-radius:
+
+        inherit;
+
+
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #3498db,
+            #2ecc71
+        );
+
+
+
+    animation:
+
+        progressMove
+        2.5s
+        ease-in-out
+        infinite;
+
+
+}
+
+
+
+/* Status */
+
+
+.p-knowledge__status {
+
+
+    display:inline-block;
+
+
+
+    padding:
+
+        var(--space-3)
+        var(--space-6);
+
+
+
+    border-radius:
+
+        var(--radius-md);
+
+
+
+    background:
+
+        rgba(
+            52,
+            152,
+            219,
+            .12
+        );
+
+
+
+    border:
+
+        1px solid
+        rgba(
+            52,
+            152,
+            219,
+            .35
+        );
+
+
+
+    font-family:
+
+        monospace;
+
+
+}
+
+
+
+.p-knowledge__status span {
+
+
+    color:
+
+        #3498db;
+
+
+}
+
+
+
+/* Actions */
+
+
+.p-knowledge__actions {
+
+
+    display:flex;
+
+
+
+    justify-content:center;
+
+
+
+    gap:
+
+        var(--space-4);
+
+
+
+    margin-top:
+
+        var(--space-6);
+
+
+
+    flex-wrap:
+
+        wrap;
+
+
+}
+
+
+
+/* Animations */
+
+
+@keyframes knowledgeEnter {
+
+
+    from {
+
+        opacity:0;
+
+        transform:
+
+            translateY(25px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:
+
+            translateY(0);
+
+    }
+
+
+}
+
+
+
+@keyframes brainPulse {
+
+
+    0%,
+    100% {
+
+        transform:
+
+            scale(1);
+
+    }
+
+
+    50% {
+
+        transform:
+
+            scale(1.08);
+
+    }
+
+
+}
+
+
+
+@keyframes progressMove {
+
+
+    0% {
+
+        transform:
+
+            translateX(-40%);
+
+    }
+
+
+    100% {
+
+        transform:
+
+            translateX(120%);
+
+    }
+
+
+}
+
+
+
+/* Responsive */
+
+
+@media(max-width:768px){
+
+
+    .p-knowledge {
+
+
+        padding:
+
+            var(--space-4);
+
+
+    }
+
+
+
+    .p-knowledge__container {
+
+
+        padding:
+
+            var(--space-6);
+
+    }
+
+    .p-knowledge__container {
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+    
+
+
+}
