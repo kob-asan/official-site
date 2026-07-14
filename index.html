@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <!-- ==========================================
+         Basic
+    =========================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kob_asan</title>
+
+    <meta name="description"
+        content="Kob_asanによる学習まとめサイト。数学・英語・情報・プログラミングなどの学習内容を整理しています。">
+
+    <meta name="theme-color" content="#090B0F">
+    <meta name="color-scheme" content="dark">
+
+    <!-- ==========================================
+         PWA
+    =========================================== -->
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="favicon.ico">
+
+    <!-- ==========================================
+         Font
+    =========================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- ==========================================
+         Base CSS
+    =========================================== -->
+
+    <link rel="stylesheet" href="assets/css/base/reset.css">
+    <link rel="stylesheet" href="assets/css/base/variables.css">
+    <link rel="stylesheet" href="assets/css/base/typography.css">
+    <link rel="stylesheet" href="assets/css/base/layout.css">
+
+    <!-- ==========================================
+         Layout CSS
+    =========================================== -->
+
+    <link rel="stylesheet" href="assets/css/layout/grid.css">
+    <link rel="stylesheet" href="assets/css/layout/header.css">
+    <link rel="stylesheet" href="assets/css/layout/navbar.css">
+    <link rel="stylesheet" href="assets/css/layout/footer.css">
+
+    <!-- ==========================================
+         Components
+    =========================================== -->
+
+    <link rel="stylesheet" href="assets/css/components/button.css">
+    <link rel="stylesheet" href="assets/css/components/card.css">
+    <link rel="stylesheet" href="assets/css/components/splash.css">
+
+    <!-- ==========================================
+         Page CSS
+    =========================================== -->
+
+    <link rel="stylesheet" href="assets/css/pages/home.css">
+
+</head>
+
+<body>
+
+    <div id="splash">
+
+    <div class="splash-system">
+
+        <h1>
+            KOB_ASAN
+        </h1>
+
+
+        <p class="splash-loading">
+            Initializing...
+        </p>
+
+
+        <div class="splash-status">
+
+            DATABASE ........ ONLINE<br>
+            SEARCH ENGINE ... ONLINE<br>
+            KNOWLEDGE BASE .. READY
+
+        </div>
+
+    </div>
+
+
+
+    <div class="star-logo">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <div class="ripple"></div>
+
+    </div>
+
+</div>
+
+    <!-- ==========================================
+         Header
+    =========================================== -->
+
+    <header class="l-header">
+
+        <div class="l-container">
+
+            <div class="l-header__inner">
+
+                <!-- Logo -->
+
+                <a href="index.html" class="c-logo">
+
+                    Kob_asan
+
+                </a>
+
+                <!-- Navigation -->
+
+                <nav
+                    class="c-navbar"
+                    aria-label="メインナビゲーション">
+
+                    <ul class="c-navbar__list">
+
+                        <li class="c-navbar__item">
+
+                            <a
+                                class="c-navbar__link is-active"
+                                href="index.html">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+                        <li class="c-navbar__item">
+
+                            <a
+                                class="c-navbar__link"
+                                href="search.html">
+
+                                Search
+
+                            </a>
+
+                        </li>
+
+                        <li class="c-navbar__item">
+                            
+                            <a 
+                            href="blog.html"
+                            class="c-navbar__link">
+
+                            Blog
+
+                        </a>
+
+</li>
+
+                        <li class="c-navbar__item">
+
+                            <a
+                                class="c-navbar__link"
+                                href="about.html">
+
+                                About
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+    </header>
+    <!-- ==========================================
+         Hero
+    =========================================== -->
+
+    <section class="p-home-hero">
+
+        <div class="l-container">
+
+            <div class="p-home-hero__content">
+
+                <span class="p-home-hero__eyebrow">
+
+                    Welcome
+
+                </span>
+
+                <h1 class="p-home-hero__title">
+
+                    Kob_asan
+
+                </h1>
+
+                <p class="p-home-hero__subtitle">
+
+                    公式(?)まとめサイト
+
+                </p>
+
+                <form
+                    class="p-home-search"
+                    action="search.html"
+                    method="get">
+
+                    <button
+                        class="c-button c-button--primary"
+                        type="submit">
+
+                        Search
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="space-bg">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+    </div>
+
+    <!-- ==========================================
+         Quick Links
+    =========================================== -->
+
+    <section class="p-home-links">
+
+        <div class="l-container">
+
+            <div class="l-cluster">
+
+                <a class="c-button c-button--ghost" href="pages/mathematics/index.html">数学</a>
+
+                <a class="c-button c-button--ghost" href="pages/other subjects/japanese/index.html">国語</a>
+
+                <a class="c-button c-button--ghost" href="pages/english/index.html">英語</a>
+
+                <a class="c-button c-button--ghost" href="pages/other subjects/biology/index.html">生物</a>
+
+                <a class="c-button c-button--ghost" href="pages/other subjects/chemistry/index.html">化学</a>
+
+                <a class="c-button c-button--ghost" href="pages/other subjects/physics/index.html">物理</a>
+
+                <a class="c-button c-button--ghost" href="pages/pc/programing/index.html">Programming</a>
+
+                <a class="c-button c-button--ghost" href="pages/pc/ai/index.html">AI</a>
+
+                <a class="c-button c-button--ghost" href="pages/pc/web/index.html">Web</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         Subjects
+    =========================================== -->
+
+    <section class="p-home-subjects">
+
+        <div class="l-container">
+
+            <header class="p-home-section-header">
+
+                <h2>
+
+                    Subjects
+
+                </h2>
+
+                <p>
+
+                    学習コンテンツ一覧
+
+                </p>
+
+            </header>
+
+            <div class="l-grid l-grid--auto">
+
+                <article class="c-card c-card--subject">
+
+                    <div class="c-card__header">
+
+                        <h3 class="c-card__title">
+
+                            Mathematics
+
+                        </h3>
+
+                    </div>
+
+                    <div class="c-card__body">
+
+                        <p class="c-card__description">
+
+                            数学Ⅰ・A・Ⅱ・B・Ⅲのまとめ
+
+                        </p>
+
+                    </div>
+
+                    <div class="c-card__footer">
+
+                        <a
+                            class="c-button c-button--primary"
+                            href="pages/mathematics/index.html">
+
+                            開く
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="c-card c-card--subject">
+
+                    <div class="c-card__header">
+
+                        <h3 class="c-card__title">
+
+                            English
+
+                        </h3>
+
+                    </div>
+
+                    <div class="c-card__body">
+
+                        <p class="c-card__description">
+
+                            英文法・長文・英単語
+
+                        </p>
+
+                    </div>
+
+                    <div class="c-card__footer">
+
+                        <a
+                            class="c-button c-button--primary"
+                            href="english.html">
+
+                            開く
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="c-card c-card--subject">
+
+                    <div class="c-card__header">
+
+                        <h3 class="c-card__title">
+
+                            Other Subjects
+
+                        </h3>
+
+                    </div>
+
+                    <div class="c-card__body">
+
+                        <p class="c-card__description">
+
+                            国語、公民、音楽などのまとめ
+
+                        </p>
+
+                    </div>
+
+                    <div class="c-card__footer">
+
+                        <a
+                            class="c-button c-button--primary"
+                            href="pages/mathematics/index.html">
+
+                            開く
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="c-card c-card--subject">
+
+                    <div class="c-card__header">
+
+                        <h3 class="c-card__title">
+
+                            Programming
+
+                        </h3>
+
+                    </div>
+
+                    <div class="c-card__body">
+
+                        <p class="c-card__description">
+
+                            HTML・CSS・JavaScript・Pythonなど
+
+                        </p>
+
+                    </div>
+
+                    <div class="c-card__footer">
+
+                        <a
+                            class="c-button c-button--primary"
+                            href="pages/programming/index.html">
+
+                            開く
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+        <!-- ==========================================
+         Footer
+    =========================================== -->
+
+    <footer class="l-footer">
+
+
+<div class="l-container">
+
+
+<div class="l-footer__inner">
+
+
+<div class="l-footer__brand">
+
+
+<h2 class="l-footer__title">
+
+Kob_asan
+
+</h2>
+
+
+<p class="l-footer__description">
+
+Kob_asanのまとめサイト
+
+</p>
+
+
+</div>
+
+
+
+
+<nav class="l-footer__nav">
+
+
+<ul class="l-footer__list">
+
+
+<li>
+
+<a href="index.html">
+
+Home
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="about.html">
+
+About
+
+</a>
+
+</li>
+
+
+
+</ul>
+
+
+</nav>
+
+
+</div>
+
+
+
+<hr>
+
+
+
+<div class="l-footer__bottom">
+
+
+<small>
+
+© 2026 Kob_asan. All Rights Reserved.
+
+</small>
+
+
+</div>
+
+
+
+</div>
+
+
+</footer>
+
+    <!-- ==========================================
+     JavaScript
+========================================== -->
+
+
+<!-- Core -->
+
+<script src="assets/js/core/config.js"></script>
+
+<script src="assets/js/core/storage.js"></script>
+
+<script src="assets/js/core/theme.js"></script>
+
+<script src="assets/js/core/loader.js"></script>
+
+<script src="assets/js/core/router.js"></script>
+
+
+
+
+
+<!-- Utils -->
+
+<script src="assets/js/utils/dom.js"></script>
+
+<script src="assets/js/utils/helper.js"></script>
+
+<script src="assets/js/utils/animation.js"></script>
+
+<script src="assets/js/utils/color.js"></script>
+
+<script src="assets/js/utils/date.js"></script>
+
+<script src="assets/js/utils/validator.js"></script>
+
+<script src="assets/js/utils/math.js"></script>
+
+
+
+<!-- Components -->
+
+<script src="assets/js/features/splash.js"></script>
+
+<script src="assets/js/components/search.js"></script>
+
+<script src="assets/js/components/card.js"></script>
+
+<script src="assets/js/components/toc.js"></script>
+
+<script src="assets/js/components/modal.js"></script>
+
+<script src="assets/js/components/tabs.js"></script>
+
+<script src="assets/js/components/accordion.js"></script>
+
+<script src="assets/js/components/dropdown.js"></script>
+
+<script src="assets/js/components/tooltip.js"></script>
+
+<script src="assets/js/components/copy.js"></script>
+
+
+
+<!-- Layout -->
+
+<script src="assets/js/layout/header.js"></script>
+
+<script src="assets/js/layout/navbar.js"></script>
+
+<script src="assets/js/layout/sidebar.js"></script>
+
+<script src="assets/js/layout/footer.js"></script>
+
+<script src="assets/js/layout/breadcrumb.js"></script>
+
+
+
+<!-- Pages -->
+
+<script src="assets/js/pages/home.js"></script>
+
+
+
+<!-- Application -->
+
+<script src="assets/js/core/app.js"></script>
+
+</body>
+
+</html>
