@@ -1,0 +1,864 @@
+/* ==========================================
+   QR Code Generator
+   Kob_asan Works #002
+========================================== */
+
+
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+
+html,
+body{
+
+    width:100%;
+
+    min-height:100%;
+
+}
+
+
+
+body{
+
+    font-family:
+        "M PLUS 1",
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(60,120,255,.12),
+            transparent 40%
+        ),
+
+        radial-gradient(
+            circle at bottom,
+            rgba(0,255,170,.08),
+            transparent 40%
+        ),
+
+        #050814;
+
+    color:white;
+
+    overflow:hidden;
+
+}
+
+
+
+/* ==========================================
+   Layout
+========================================== */
+
+
+.p-qr{
+
+    position:relative;
+
+    min-height:100vh;
+
+    padding:60px;
+
+}
+
+
+
+/* ==========================================
+   Hero
+========================================== */
+
+
+.p-qr__hero{
+
+    position:relative;
+
+    z-index:10;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.p-qr__badge{
+
+    display:inline-block;
+
+    padding:
+
+        .45rem
+        1rem;
+
+    margin-bottom:1rem;
+
+    border-radius:999px;
+
+    border:
+
+        1px solid
+        rgba(80,220,255,.35);
+
+    background:
+
+        rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    color:
+
+        rgb(120,220,255);
+
+    letter-spacing:.18em;
+
+    font-size:.8rem;
+
+}
+
+
+
+.p-qr__hero h1{
+
+    font-size:
+
+        clamp(
+            3rem,
+            7vw,
+            5rem
+        );
+
+    font-weight:900;
+
+    line-height:1;
+
+}
+
+
+
+.p-qr__hero p{
+
+    margin-top:1rem;
+
+    color:
+
+        rgba(255,255,255,.65);
+
+    font-size:1.1rem;
+
+}
+
+
+
+/* ==========================================
+   Main Panel
+========================================== */
+
+
+.p-qr__panel{
+
+    width:min(760px,100%);
+
+    margin:0 auto;
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+
+
+.c-panel{
+
+    width:100%;
+
+    max-width:760px;
+
+    margin:auto;
+
+    padding:2rem;
+
+    border-radius:22px;
+
+    background:
+        rgba(255,255,255,.05);
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+}
+
+/* ==========================================
+   Input
+========================================== */
+
+.p-qr__input{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.8rem;
+
+    margin-bottom:2rem;
+
+}
+
+
+
+.p-qr__input label{
+
+    color:
+
+        rgb(120,220,255);
+
+    font-size:.95rem;
+
+    font-weight:700;
+
+    letter-spacing:.08em;
+
+}
+
+
+
+.p-qr__input input{
+
+    width:100%;
+
+    padding:
+
+        1rem
+        1.2rem;
+
+    border-radius:14px;
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.12);
+
+    background:
+
+        rgba(255,255,255,.04);
+
+    color:white;
+
+    font-size:1rem;
+
+    font-family:inherit;
+
+    outline:none;
+
+    transition:
+
+        .25s;
+
+}
+
+
+
+.p-qr__input input::placeholder{
+
+    color:
+
+        rgba(255,255,255,.35);
+
+}
+
+
+
+.p-qr__input input:focus{
+
+    border-color:
+
+        rgba(80,220,255,.45);
+
+    box-shadow:
+
+        0 0 20px
+        rgba(80,220,255,.15);
+
+}
+
+
+
+/* ==========================================
+   Buttons
+========================================== */
+
+.p-qr__buttons{
+
+    display:flex;
+
+    gap:1rem;
+
+    flex-wrap:wrap;
+
+    margin-bottom:2rem;
+
+}
+
+
+
+.p-qr__buttons button{
+
+    flex:1;
+
+    min-width:150px;
+
+    padding:
+
+        .95rem
+        1.3rem;
+
+    border-radius:14px;
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.12);
+
+    background:
+
+        rgba(255,255,255,.05);
+
+    backdrop-filter:
+
+        blur(20px);
+
+    color:white;
+
+    font-family:inherit;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    transition:
+
+        .25s;
+
+}
+
+
+
+.p-qr__buttons button:hover{
+
+    transform:
+
+        translateY(-3px);
+
+    border-color:
+
+        rgba(80,220,255,.5);
+
+    box-shadow:
+
+        0 0 25px
+        rgba(80,220,255,.18);
+
+}
+
+
+
+/* ==========================================
+   QR Result
+========================================== */
+
+.p-qr__result{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:260px;
+
+    margin-bottom:1.5rem;
+
+}
+
+
+
+#qrcode{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:240px;
+    
+    min-height:240px;
+
+    padding:1.5rem;
+
+    border-radius:22px;
+
+    background:white;
+
+    box-shadow:
+
+        0 18px 45px
+        rgba(0,0,0,.25);
+
+}
+
+
+
+#qrcode canvas,
+#qrcode img{
+
+    display:block;
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+
+
+/* ==========================================
+   Message
+========================================== */
+
+.p-qr__message{
+
+    text-align:center;
+
+    color:
+
+        rgba(255,255,255,.65);
+
+    font-size:.95rem;
+
+    min-height:1.5rem;
+
+}
+
+/* ==========================================
+   Footer
+========================================== */
+
+.p-qr__footer{
+
+    margin-top:auto;
+
+}
+
+
+
+.c-back{
+
+    display:inline-block;
+
+    padding:
+
+        .8rem
+        1.4rem;
+
+    text-decoration:none;
+
+    color:white;
+
+    border-radius:999px;
+
+    background:
+
+        rgba(255,255,255,.05);
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.12);
+
+    backdrop-filter:
+
+        blur(20px);
+
+    transition:
+
+        .25s;
+
+}
+
+
+
+.c-back:hover{
+
+    transform:
+
+        translateY(-3px);
+
+    border-color:
+
+        rgba(80,220,255,.5);
+
+    box-shadow:
+
+        0 0 25px
+        rgba(80,220,255,.18);
+
+}
+
+
+
+/* ==========================================
+   Space Background
+========================================== */
+
+.space-bg{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+
+
+.space-bg span{
+
+    position:absolute;
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:
+
+        rgba(80,220,255,.85);
+
+    box-shadow:
+
+        0 0 20px
+        rgba(80,220,255,.9);
+
+    animation:
+
+        starPulse
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+
+.space-bg span:nth-child(1){
+
+    top:20%;
+
+    left:15%;
+
+}
+
+
+
+.space-bg span:nth-child(2){
+
+    top:70%;
+
+    left:25%;
+
+    animation-delay:1s;
+
+}
+
+
+
+.space-bg span:nth-child(3){
+
+    top:35%;
+
+    left:80%;
+
+    background:
+
+        rgba(80,255,160,.85);
+
+}
+
+
+
+.space-bg span:nth-child(4){
+
+    top:80%;
+
+    left:70%;
+
+    animation-delay:2s;
+
+}
+
+
+
+.space-bg span:nth-child(5){
+
+    top:15%;
+
+    left:60%;
+
+    background:
+
+        rgba(80,255,160,.85);
+
+}
+
+
+
+.space-bg span:nth-child(6){
+
+    top:55%;
+
+    left:45%;
+
+    animation-delay:.5s;
+
+}
+
+
+
+.space-bg span:nth-child(7){
+
+    top:40%;
+
+    left:90%;
+
+    animation-delay:1.5s;
+
+}
+
+
+
+@keyframes starPulse{
+
+    0%,
+    100%{
+
+        opacity:.3;
+
+        transform:
+
+            scale(1);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:
+
+            scale(2);
+
+    }
+
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:900px){
+
+    .p-qr{
+
+        padding:30px;
+
+    }
+
+
+
+    .p-qr__hero{
+
+        margin-bottom:40px;
+
+    }
+
+
+
+    .p-qr__buttons{
+
+        flex-direction:column;
+
+    }
+
+
+
+    .p-qr__buttons button{
+
+        width:100%;
+
+    }
+
+
+
+    .p-qr__panel{
+
+        width:100%;
+
+    }
+
+
+
+    #qrcode{
+
+        min-width:220px;
+
+        min-height:220px;
+
+        padding:1rem;
+
+    }
+
+
+
+    .p-qr__footer{
+
+        margin-top:40px;
+
+    }
+
+}
+
+.c-back{
+
+    display:inline-block;
+
+    padding:
+
+        .8rem
+        1.4rem;
+
+    text-decoration:none;
+
+    color:white;
+
+    border-radius:999px;
+
+    background:
+
+        rgba(255,255,255,.05);
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.12);
+
+    backdrop-filter:
+
+        blur(20px);
+
+    transition:
+
+        .25s;
+
+}
+
+
+
+.c-back:hover{
+
+    transform:
+
+        translateY(-3px);
+
+    border-color:
+
+        rgba(80,220,255,.5);
+
+    box-shadow:
+
+        0 0 25px
+        rgba(80,220,255,.18);
+
+}
+
+
+
+@media(max-width:600px){
+
+    .p-qr{
+
+        padding:20px;
+
+    }
+
+
+
+    .p-qr__hero h1{
+
+        font-size:2.4rem;
+
+    }
+
+
+
+    .p-qr__hero p{
+
+        font-size:1rem;
+
+    }
+
+
+
+    .c-panel{
+
+        padding:1.4rem;
+
+    }
+
+
+
+    .p-qr__buttons{
+
+        gap:.8rem;
+
+    }
+
+
+
+    .p-qr__buttons button{
+
+        min-width:100%;
+
+    }
+
+
+
+    #qrcode{
+
+        min-width:180px;
+
+        min-height:180px;
+
+    }
+
+}

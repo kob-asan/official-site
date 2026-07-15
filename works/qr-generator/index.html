@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>QR Code Generator | Kob_asan Works</title>
+
+<meta name="description"
+      content="QRコード生成ツール">
+
+<meta name="theme-color"
+      content="#090B0F">
+
+<meta name="color-scheme"
+      content="dark">
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&display=swap"
+      rel="stylesheet">
+
+<link rel="stylesheet"
+      href="style.css">
+
+</head>
+
+<body>
+
+<main class="p-qr">
+
+<div class="space-bg">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
+
+
+
+<header class="p-qr__hero">
+
+<div class="p-qr__badge">
+
+WORKS #002
+
+</div>
+
+<h1>
+
+QR Code Generator
+
+</h1>
+
+<p>
+
+URLやテキストからQRコードを生成します。
+
+</p>
+
+</header>
+
+
+
+
+
+<section class="p-qr__card">
+
+<div class="p-qr__input">
+
+<label for="qrText">
+
+Text / URL
+
+</label>
+
+<input
+
+id="qrText"
+
+type="text"
+
+placeholder="https://example.com">
+
+</div>
+
+
+
+
+
+<div class="p-qr__buttons">
+
+<button id="generateButton">
+
+Generate
+
+</button>
+
+<button id="downloadButton">
+
+Download
+
+</button>
+
+<button id="clearButton">
+
+Clear
+
+</button>
+
+</div>
+
+
+
+
+
+<div class="p-qr__result">
+
+<div id="qrcode">
+
+</div>
+
+</div>
+
+
+
+
+
+<p
+class="p-qr__message"
+id="message">
+
+</p>
+
+</section>
+
+
+
+
+
+<footer class="p-qr__footer">
+
+<a
+href="../../works.html"
+class="c-back">
+
+← Back to Works
+
+</a>
+
+</footer>
+
+</main>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
